@@ -15,6 +15,10 @@ for subject in subjects:
     papers = [ f.name for f in os.scandir(f"papers/{subject}") if f.is_dir() ]
     print(papers)
     for paper in papers:
+        years = sorted(list(set([ f.name.split(" ")[1] for f in os.scandir(f"papers/{subject}/{paper}") ])))
+
+        print(years)
+
         gened_qp_segment = ""
         gened_ms_segment = ""
         for year in years:

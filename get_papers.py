@@ -36,9 +36,9 @@ for paper in range(1, 3):
 for module in ["Mechanics", "Discrete"]:
     for year in list(range(2019, 2021)) + list(range(2023, 2026)):
             url = f"https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/AQA-Further/Paper-3-{module}/QP/June%20{year}%20QP.pdf"
-            download_and_save(url, "Further Maths", f"3/{module}", f"June {year} QP")
+            download_and_save(url, "Further Maths", f"3 - {module}", f"June {year} QP")
             url = f"https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/AQA-Further/Paper-3-{module}/MS/June%20{year}%20MS.pdf"
-            download_and_save(url, "Further Maths", f"3/{module}", f"June {year} MS")
+            download_and_save(url, "Further Maths", f"3 - {module}", f"June {year} MS")
     for year in range(2020, 2023):
                 url = f"https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/AQA-Further/Paper-3-{module}/QP/June%20{year}%20QP.PDF"
                 download_and_save(url, "Further Maths", f"3 - {module}", f"June {year} QP")
