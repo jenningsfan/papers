@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.one-half {
+  width: fit-content;
+  float: left;
+}
+
+.subject {
+    width: fit-conten;
+    float:left;
+}
