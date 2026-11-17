@@ -16,11 +16,16 @@ for subject in subjects:
     print(papers)
     for paper in papers:
         years = sorted(list(set([ f.name.split(" ")[1] for f in os.scandir(f"papers/{subject}/{paper}") ])))
+        years = [year for year in years if year.isdigit()]
 
         print(years)
 
         gened_qp_segment = ""
         gened_ms_segment = ""
+
+        gened_qp_segment += single_template.replace("%NAME%", f"Specimen QP").replace("%URL%", f"papers/{subject}/{paper}/Specimen QP.pdf")
+        gened_ms_segment += single_template.replace("%NAME%", f"Specimen MS").replace("%URL%", f"papers/{subject}/{paper}/Specimen MS.pdf")
+
         for year in years:
             qp_url = f"papers/{subject}/{paper}/June {year} QP.pdf"
             ms_url = f"papers/{subject}/{paper}/June {year} MS.pdf"
