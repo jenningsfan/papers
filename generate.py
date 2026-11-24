@@ -17,7 +17,7 @@ def do_german():
     genned_untracked = ""
     genned_transcript = ""
 
-    years = [ f.name for f in os.scandir(f"papers/German/1") if f.is_dir() if f.name.isdigit() ]
+    years = sorted([ f.name for f in os.scandir(f"papers/German/1") if f.is_dir() if f.name.isdigit() ])
     years.insert(0, "Specimen")
 
     for year in years:
@@ -61,7 +61,7 @@ def gen_paper(subject, paper):
 
 for subject in subjects:
     paper_segments = []
-    papers = [ f.name for f in os.scandir(f"papers/{subject}") if f.is_dir() ]
+    papers = sorted([ f.name for f in os.scandir(f"papers/{subject}") if f.is_dir() ])
     print(papers)
     for paper in papers:
         paper_segments.append(gen_paper(subject, paper))
