@@ -38,8 +38,11 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
         with:
+          name: site
           path: .
 
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: site
